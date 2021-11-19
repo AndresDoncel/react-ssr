@@ -1,0 +1,117 @@
+.container__detail__movie {
+  width: 100%;
+  max-width: 1200px;
+  padding: 37px 60px;
+  background: #232323;
+  &__search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    p {
+      color: #f65261;
+      font-size: 20px;
+      font-weight: bold;
+
+      span {
+        font-weight: 500;
+      }
+    }
+
+    svg {
+      fill: #f65261;
+      font-size: 25px;
+      cursor: pointer;
+    }
+  }
+  &__info {
+    display: flex;
+    img {
+      width: 325px;
+      height: 486px;
+      object-fit: cover;
+      margin-right: 60px;
+    }
+    &__detail {
+      .container_name {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        h1 {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 40px;
+          line-height: 49px;
+          text-align: center;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          color: #ffffff;
+          margin: 0 25px 0 0;
+        }
+      }
+      .rate {
+        border: 1px solid #ffffff;
+        box-sizing: border-box;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
+      .category {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #ffffff;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+        margin-bottom: 30px;
+      }
+      .container_duration {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+
+        span {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 24px;
+          line-height: 29px;
+          color: #f65261;
+        }
+
+        span:first-child {
+          margin-right: 50px;
+        }
+      }
+      .sinopsis {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 24px;
+        color: #ffffff;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+      }
+    }
+  }
+}
+.space__movie__detail {
+  height: 10px;
+  background: #888888;
+  width: 100%;
+}

@@ -1,0 +1,17 @@
+.container__footer {
+  background: #424242;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    color: #f65261;
+    font-size: 20px;
+    font-weight: bold;
+
+    span {
+      font-weight: 500px;
+    }
+  }
+}

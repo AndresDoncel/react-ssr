@@ -1,0 +1,28 @@
+html :global,
+* {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat";
+  background: #232323;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+input {
+  border: none !important;
+}
+
+p {
+  margin: 0;
+}

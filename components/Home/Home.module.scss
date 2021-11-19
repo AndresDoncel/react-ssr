@@ -1,0 +1,21 @@
+.container_app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat";
+  background: #232323;
+
+  button {
+    border: 0;
+    cursor: pointer;
+  }
+
+  input {
+    border: none !important;
+  }
+
+  p {
+    margin: 0;
+  }
+}

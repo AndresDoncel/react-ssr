@@ -1,0 +1,110 @@
+.container__movie {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 37px;
+  cursor: pointer;
+  position: relative;
+
+  .options__modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 111px;
+    width: 190px;
+    border-radius: 4px;
+    background: rgba(35, 35, 35, 0.918051);
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    .button_close_modal {
+      position: absolute;
+      right: 14px;
+      top: 7px;
+      color: #fff;
+      font-size: 20px;
+    }
+    .action_modal {
+      padding-left: 23px;
+      display: flex;
+      align-items: center;
+      height: 34px;
+      color: #fff;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 5px;
+    }
+
+    .action_modal:hover {
+      background: #f65261;
+    }
+  }
+  .container__movie__options {
+    display: none;
+  }
+  &__image {
+    height: 455px;
+    width: 322px;
+    object-fit: cover;
+  }
+  &__name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+
+    p:first-child {
+      opacity: 0.7;
+      color: #fff;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: 0px;
+      text-align: left;
+    }
+    p:nth-child(2) {
+      border: 1px solid #555555;
+      box-sizing: border-box;
+      border-radius: 4px;
+      cursor: pointer;
+      color: #fff;
+      opacity: 0.7;
+      font-weight: 500;
+      font-size: 14px;
+      height: 26px;
+      width: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__category {
+    margin-top: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #fff;
+    opacity: 0.5;
+  }
+}
+
+.container__movie:hover {
+  .container__movie__options {
+    display: flex;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+    right: 14px;
+    top: 14px;
+    background: #2a202d;
+    color: #fff;
+  }
+}
