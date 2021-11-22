@@ -1,35 +1,36 @@
 import { App } from "../components/App/App";
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import http from "../http-common";
 
 const isServer = () => typeof window === "undefined";
 
-const getMovies = (searchQuery) => {
-  return axios
-    .get(`http://localhost:4000/movies?search=${searchQuery}`)
+const getMovies = (searchQuery, searchByQuery) => {
+  return http
+    .get(`/movies?search=${searchQuery}&searchBy=${searchByQuery}`)
     .then((response) => response.data);
 };
 
 function Search({ movies }) {
   const router = useRouter();
   const searchQuery = getRoute(router, "searchQuery");
+  const searchByQuery = getRoute(router, "searchBy");
 
   const [searchMovies, setMovies] = useState(movies);
-
   useEffect(async () => {
     if (movies == null) {
-      const movies = await getMovies(searchQuery);
-      setMovies(movies.data.data);
+      const movies = await getMovies(searchQuery, searchByQuery);
+      setMovies(movies.data);
     }
   }, []);
 
   return <App movies={searchMovies} />;
 }
 
-Search.getInitialProps = async (context) => {
+Search.getInitialProps = async ({ query }) => {
+  const { searchQuery, searchBy } = query;
   if (isServer()) {
-    const res = await getMovies();
+    const res = await getMovies(searchQuery, searchBy);
     return {
       movies: res.data,
     };

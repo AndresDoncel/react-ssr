@@ -20,11 +20,11 @@ export const MovieDetail = ({ app, movieId, onSearchSelect }) => {
             {app.title}
             <span>{app.subtitle}</span>
           </p>
-          {/* <FaSearch
+          <FaSearch
             onClick={() => {
               onSearchSelect();
             }}
-          /> */}
+          />
         </div>
         <div className={styles.container__detail__movie__info}>
           <img src={movie.poster_path} alt="" />
