@@ -16,13 +16,19 @@ import { FormAddMovie } from "../FormAddMovie";
 import movieService from "../../services/movie.service";
 import styles from "./ListMovies.module.scss";
 
-const ListMovies = ({ movies }) => {
+const ListMovies = ({ movies, onMovieSelect }) => {
   return (
     <ErrorBoundary>
       <FilterBar />
       <div className={styles.container__movies}>
-        {movies.map((movie) => {
-          return <MovieCard key={movie.id} movie={movie} />;
+        {movies?.map((movie) => {
+          return (
+            <MovieCard
+              onMovieSelect={onMovieSelect}
+              key={movie.id}
+              movie={movie}
+            />
+          );
         })}
       </div>
     </ErrorBoundary>
